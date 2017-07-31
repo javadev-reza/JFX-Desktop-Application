@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jfx.pos.controller.Authentication">
+    <stylesheets>
+        <URL value="@/com/jfx/styles/authentication.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="CENTER" fillWidth="false" onMouseClicked="#forgotPasswordAction" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #EEEEEE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="475.0" prefWidth="345.0" style="-fx-background-color: white; -fx-border-radius: 20; -fx-background-radius: 15;">
+               <children>
+                  <VBox alignment="CENTER" fillWidth="false" layoutX="10.0" layoutY="30.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Pane nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="250.0">
+                           <children>
+                              <Label layoutX="1.0" layoutY="-5.0" text="Sign In">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                              </Label>
+                              <Label layoutX="1.0" layoutY="32.0" text="Information System">
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                              </Label>
+                              <Separator layoutY="26.0" prefHeight="3.0" prefWidth="250.0">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </Separator>
+                              <JFXProgressBar fx:id="progressbar" layoutY="28.0" prefHeight="3.0" prefWidth="250.0" visible="false" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="75.0" />
+                           </VBox.margin>
+                        </Pane>
+                        <ImageView disable="true" fitHeight="64.0" fitWidth="64.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets bottom="50.0" />
+                           </VBox.margin>
+                           <image>
+                              <Image url="@../image/login.png" />
+                           </image>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </ImageView>
+                        <VBox alignment="TOP_RIGHT" fillWidth="false" prefHeight="70.0" prefWidth="250.0">
+                           <children>
+                              <JFXTextField fx:id="username" alignment="BOTTOM_LEFT" focusColor="#00796b" labelFloat="true" prefHeight="25.0" prefWidth="250.0" promptText="Email" style="-fx-prompt-text-fill: black;" unFocusColor="#aeaeae">
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXPasswordField fx:id="password" alignment="BOTTOM_LEFT" focusColor="#00796b" labelFloat="true" prefHeight="3.0" prefWidth="250.0" promptText="Password" style="-fx-prompt-text-fill: black;" unFocusColor="#aeaeae">
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                              </JFXPasswordField>
+                              <JFXButton fx:id="login" buttonType="RAISED" onAction="#LoginAction" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #00796B;" text="Login" textFill="WHITE">
+                                 <effect>
+                                    <DropShadow height="10.0" radius="4.5" width="10.0" />
+                                 </effect>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                              <Separator prefHeight="0.0" prefWidth="120.0" />
+                              <Label fx:id="forgotpassword" onMouseClicked="#forgotPasswordAction" text="Forgot Password">
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </AnchorPane>
+         </children>
+         <effect>
+            <Glow />
+         </effect>
+      </VBox>
+   </children>
+</AnchorPane>
